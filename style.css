@@ -4,6 +4,7 @@ html, body {
     background-color: black;
     font-family: Helvetica, sans-serif;
     overflow: hidden;
+    overflow: -moz-scrollbars-none;
 }
 .weather-section{
     display: flex;
@@ -66,7 +67,7 @@ html, body {
     justify-content: center;
 }
 .daily-weather-day{
-    /*margin:5px;*/
+    margin:1vw;
 }
 .is-current-month-day{
     color:red;
@@ -126,7 +127,7 @@ html, body {
         flex-wrap: wrap;
         position: relative;
         top: 10vh;
-        justify-content: space-around;
+        justify-content: center;
     }
     .daily-weather-day {
         font-size: 20px;
