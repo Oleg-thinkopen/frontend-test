@@ -4,7 +4,6 @@ html, body {
     background-color: black;
     font-family: Helvetica, sans-serif;
     overflow: hidden;
-    overflow: -moz-scrollbars-none;
 }
 .weather-section{
     display: flex;
