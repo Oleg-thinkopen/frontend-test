@@ -1,0 +1,140 @@
+html, body {
+    margin: 0;
+    padding:0;
+    background-color: black;
+    font-family: Helvetica, sans-serif;
+    overflow: hidden;
+}
+.weather-section{
+    display: flex;
+    flex-direction: column-reverse;
+    height:100vh;
+}
+.root, .content{
+    flex-shrink: 0;
+}
+.root{
+    display: flex;
+    flex: 1 1 100%;
+    scroll-snap-type: x mandatory;
+    overflow-x: auto;
+}
+.content{
+    text-align:center;
+    width:100vw;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    overflow: hidden;
+}
+.root::-webkit-scrollbar {
+    display: none;
+}
+
+.bg-div{
+    filter:blur(5px) saturate(.5);
+    opacity: .7;
+    width:100vw;
+    height:100vh;
+}
+
+.info{
+    position: relative;
+    color: white;
+    top: -90vh;
+    font-size: 30px;
+}
+.info,h1,h4{
+    margin:0;
+}
+
+.daily-weather-now {
+    display: flex;
+    place-content: center;
+}
+
+.daily-weather-now h4{
+    align-self: center;
+}
+.current-temp{
+    font-size:4em;
+}
+.daily-weather{
+    display: flex;
+    flex-wrap: wrap;
+    position:relative;
+    top:5vh;
+    justify-content: center;
+}
+.daily-weather-day{
+    /*margin:5px;*/
+}
+.is-current-month-day{
+    color:red;
+    font-weight: bold;
+}
+.daily-weather-img{
+    width:10vh;
+    margin:0;
+}
+.daily-weather-temp{
+    font-size:30px;
+}
+
+.nav-dot-container{
+    color:white;
+    display: flex;
+    place-content: center;
+    height:30px;
+    position: fixed;
+    width:100vw;
+    z-index:100;
+}
+.nav-dot{
+    margin:0 20px;
+    align-self: center;
+    transition-duration: .2s;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.nav-dot:hover{
+    cursor:pointer;
+}
+.nav-dot-active{
+    color:red;
+    transition-duration:.2s;
+    font-weight: bold;
+}
+
+@media (max-width: 768px){
+    .info h1 {
+        font-size: 30px;
+    }
+    .info h4 {
+        font-size: 20px;
+    }
+    .current-temp{
+        font-size: 70px;
+    }
+    .daily-weather{
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        top: 10vh;
+        justify-content: space-around;
+    }
+    .daily-weather-day {
+        font-size: 20px;
+    }
+    .daily-weather img {
+        width: 50px;
+    }
+    .daily-weather-temp {
+        font-size: 15px;
+    }
+}
